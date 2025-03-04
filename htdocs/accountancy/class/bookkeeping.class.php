@@ -1941,6 +1941,7 @@ class BookKeeping extends CommonObject
 		$sql .= " FROM ".MAIN_DB_PREFIX.$this->table_element.$mode;
 		$sql .= " WHERE piece_num = ".((int) $piecenum);
 		$sql .= " AND entity = " . ((int) $conf->entity); // Do not use getEntity for accounting features
+		$sql .= " ORDER BY date_creation";
 
 		dol_syslog(__METHOD__, LOG_DEBUG);
 		$result = $this->db->query($sql);
