@@ -969,7 +969,7 @@ if ($resql) {
 				$texttoshow .= $langs->trans("InputReceiptNumberBis");
 			}
 			print $texttoshow;
-			print '<input class="flat width100" pattern="[0-9]+" title="'.dol_escape_htmltag($texttoshow.': '.$placeholder2).'" id="num_releve" name="num_releve" placeholder="'.dol_escape_htmltag($placeholder).'" type="text" value="'.(GETPOSTINT('num_releve') ? GETPOSTINT('num_releve') : '').'">'; // The only default value is value we just entered
+      print '<input class="flat width100" pattern="[0-9/]+" title="'.dol_escape_htmltag($texttoshow.': '.$placeholder2).'" id="num_releve" name="num_releve" placeholder="'.dol_escape_htmltag($placeholder).'" type="text" value="'.(GETPOSTINT('num_releve') ? GETPOSTINT('num_releve') : '').'">'; // The only default value is value we just entered
 		}
 		print '</div>';
 		if (is_array($options) && count($options)) {
