@@ -363,6 +363,8 @@ foreach ($tabfac as $key => $val) {		// Loop on each invoice
 }
 */
 // New way, single query, load all unbound lines
+
+if (!empty($tabfac)) {
 $sql = "
 SELECT
     fk_facture_fourn,
@@ -386,6 +388,7 @@ while ($i < $num) {
 		$errorforinvoice[$obj->fk_facture_fourn] = 'somelinesarenotbound';
 	}
 	$i++;
+}
 }
 //var_dump($errorforinvoice);exit;
 
